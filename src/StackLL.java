@@ -1,4 +1,37 @@
-public class StackLL {
+import java.util.LinkedList;
+
+public class StackLL<E> {
+
+    private LinkedList<E> stackLL = null;
+
+    public StackLL() {
+        stackLL = new LinkedList<>();
+    }
+
+    public E push(E item) {
+        stackLL.addFirst(item);
+        return item;
+    }
+
+    public E pop() {
+        return stackLL.removeFirst();
+    }
+
+    public E peek() {
+        return stackLL.peek();
+    }
+
+    public void display() {
+        System.out.println(stackLL);
+    }
+
+    public int size() {
+        return stackLL.size();
+    }
+
+    public boolean isEmpty() {
+        return stackLL.isEmpty();
+    }
 }
 
 
